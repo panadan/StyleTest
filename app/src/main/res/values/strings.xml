@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">StyleTest</string>
+    <string name="app_name">Love Test TVB</string>
     <string name="hello_world">Hello world!</string>
-    <string name="your_name">Your Name</string>
+    <string name="name">Name</string>
+    <string name="you">You</string>
+    <string name="your_lvr">Your Lover</string>
     <string name="action_settings">Settings</string>
+    <string name="year_of_birth">Year of birth</string>
 
 </resources>

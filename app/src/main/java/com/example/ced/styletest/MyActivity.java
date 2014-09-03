@@ -17,8 +17,20 @@ public class MyActivity extends Activity {
 
         Typeface tf = Typeface.createFromAsset(getAssets(),
                 "fonts/Yellowtail-Regular.otf");
-        TextView tv = (TextView) findViewById(R.id.CustomFontText);
+
+        TextView tv = (TextView) findViewById(R.id.name2Text);
         tv.setTypeface(tf);
+        TextView tv2 = (TextView) findViewById(R.id.youText);
+        tv2.setTypeface(tf);
+        TextView tv3 = (TextView) findViewById(R.id.yourLvrText);
+        tv3.setTypeface(tf);
+        TextView tv4 = (TextView) findViewById(R.id.nameText);
+        tv4.setTypeface(tf);
+        TextView tv5 = (TextView) findViewById(R.id.yearText);
+        tv5.setTypeface(tf);
+        TextView tv6 = (TextView) findViewById(R.id.yearText2);
+        tv6.setTypeface(tf);
+
     }
 
 

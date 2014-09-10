@@ -5,7 +5,12 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MyActivity extends Activity {
@@ -30,6 +35,24 @@ public class MyActivity extends Activity {
         tv5.setTypeface(tf);
         TextView tv6 = (TextView) findViewById(R.id.yearText2);
         tv6.setTypeface(tf);
+        TextView tv7 = (TextView) findViewById(R.id.colorText);
+        tv7.setTypeface(tf);
+        TextView tv8 = (TextView) findViewById(R.id.colorText2);
+        tv8.setTypeface(tf);
+
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner2 = (Spinner) findViewById(R.id.spinner2);
+// Create an ArrayAdapter using the string array and a default spinner layout
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+               R.array.hair_color_array, R.layout.spinner_item);
+
+// Specify the layout to use when the list of choices appears
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+// Apply the adapter to the spinner
+
+        spinner.setAdapter(adapter);
+        spinner2.setAdapter(adapter);
+
 
     }
 

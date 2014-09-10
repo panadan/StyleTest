@@ -11,11 +11,22 @@
     android:id="@+id/top_view">
 
     <TextView
+        android:text="@string/you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/youText"
+        android:textSize="25sp"
+        android:textColor="#ffffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
         android:text="@string/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/nameText"
-        android:textSize="20dp"
+        android:textSize="18sp"
         android:textColor="#ffffffff"
         android:layout_below="@+id/youText"
         android:layout_alignParentLeft="true"
@@ -25,80 +36,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/editTextName"
-        android:autoText="false"
-        android:editable="false"
         android:padding="5dp"
         android:background="@drawable/rounded_edittext"
         android:width="120dp"
         android:textColor="#ffffffff"
-        android:inputType="textCapSentences"
+        android:inputType="textCapSentences|textPersonName"
         android:layout_below="@+id/nameText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editTextName2"
-        android:autoText="false"
-        android:editable="false"
-        android:padding="5dp"
-        android:background="@drawable/rounded_edittext"
-        android:width="120dp"
-        android:textColor="#ffffffff"
-        android:inputType="textCapSentences"
-        android:password="false"
-        android:layout_below="@+id/name2Text"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="@string/you"
+        android:text="@string/year_of_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/youText"
-        android:textSize="30dp"
+        android:id="@+id/yearText"
+        android:textSize="18sp"
         android:textColor="#ffffffff"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="@string/your_lvr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/yourLvrText"
-        android:textSize="30dp"
-        android:textColor="#ffffffff"
-        android:layout_below="@+id/editTextName"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculate!"
-        android:id="@+id/button"
-        android:textColor="#ffffffff"
-        android:textSize="20dp"
-        android:background="@drawable/rounded_button2"
-        android:clickable="false"
-        android:layout_marginBottom="54dp"
-        android:width="120dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:text="@string/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/name2Text"
-        android:textSize="20dp"
-        android:textColor="#ffffffff"
-        android:layout_below="@+id/yourLvrText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/editTextYear"
+        android:layout_alignLeft="@+id/editTextYear"
+        android:layout_alignStart="@+id/editTextYear" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -109,32 +66,81 @@
         android:background="@drawable/rounded_edittext"
         android:width="100dp"
         android:numeric="integer"
-
-
         android:textColor="#ffffffff"
         android:layout_alignTop="@+id/editTextName"
-        android:layout_toRightOf="@+id/yourLvrText"
-        android:layout_toEndOf="@+id/yourLvrText"
         android:layout_marginLeft="31dp"
-        android:layout_above="@+id/yourLvrText" />
+        android:layout_toRightOf="@+id/editTextName"
+        android:layout_above="@+id/colorText" />
+
 
     <TextView
-        android:text="@string/year_of_birth"
+        android:text="@string/hair_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/yearText"
-        android:textSize="20dp"
+        android:id="@+id/colorText"
+        android:textSize="18sp"
         android:textColor="#ffffffff"
-        android:layout_above="@+id/editTextYear"
-        android:layout_alignLeft="@+id/editTextYear"
-        android:layout_alignStart="@+id/editTextYear" />
+        android:layout_below="@+id/editTextName"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:id="@+id/spinner"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@+id/colorText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_toRightOf="@+id/editTextName"
+        android:layout_toEndOf="@+id/editTextName"
+        android:layout_alignRight="@+id/editTextName"
+        android:layout_alignEnd="@+id/editTextName" />
+
+    <TextView
+        android:text="@string/your_lvr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/yourLvrText"
+        android:textSize="25sp"
+        android:textColor="#ffffffff"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:text="@string/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/name2Text"
+        android:textSize="18sp"
+        android:textColor="#ffffffff"
+        android:layout_below="@+id/yourLvrText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextName2"
+        android:padding="5dp"
+        android:background="@drawable/rounded_edittext"
+        android:width="120dp"
+        android:textColor="#ffffffff"
+        android:inputType="textCapSentences|textPersonName"
+        android:layout_below="@+id/name2Text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="@string/year_of_birth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/yearText2"
-        android:textSize="20dp"
+        android:textSize="18sp"
         android:textColor="#ffffffff"
         android:layout_below="@+id/yourLvrText"
         android:layout_alignLeft="@+id/editTextYear"
@@ -149,11 +155,51 @@
         android:background="@drawable/rounded_edittext"
         android:width="100dp"
         android:numeric="integer"
-
         android:textColor="#ffffffff"
         android:layout_below="@+id/yearText2"
         android:layout_alignLeft="@+id/yearText2"
         android:layout_alignStart="@+id/yearText2"
         android:layout_alignBottom="@+id/editTextName2" />
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate!"
+        android:id="@+id/button"
+        android:textColor="#ffffffff"
+        android:textSize="20dp"
+        android:background="@drawable/rounded_button2"
+        android:clickable="false"
+        android:width="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@string/hair_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/colorText2"
+        android:textSize="18sp"
+        android:textColor="#ffffffff"
+        android:layout_below="@+id/editTextName2"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:id="@+id/spinner2"
+        android:background="@drawable/rounded_edittext"
+        android:layout_below="@+id/colorText2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/editTextYear"
+        android:layout_toLeftOf="@+id/editTextYear"
+        android:layout_alignRight="@+id/editTextName2"
+        android:layout_alignEnd="@+id/editTextName2" />
+
 
 </RelativeLayout>
